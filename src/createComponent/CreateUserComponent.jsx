@@ -46,8 +46,8 @@ class CreateUserComponent extends Component {
             })
             .catch(error => {
                 if (error.response.status === 400){
-                    console.log(Object.keys(error.response.data));
-                    Object.values(error.response.data).map((message) => {
+                    // eslint-disable-next-line array-callback-return
+                    Object.values(error.response.data.errors).map((message) => {
                         console.log(message);
                     });   
                     alert("user isn`t registered. errors are in console")
