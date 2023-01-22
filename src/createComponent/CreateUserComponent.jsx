@@ -41,7 +41,7 @@ class CreateUserComponent extends Component {
             UserService.createUser(user)
             .then(res => {
                 if (res.status === 201){
-                    console.log("user is registered")
+                   alert("user is registered")
                 }   
             })
             .catch(error => {
